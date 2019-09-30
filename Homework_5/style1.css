@@ -61,7 +61,6 @@ body {
     font-weight: bold;
     font-size: 40px;
     color: #F7882F;
-    text-align: bottom;
     padding-left: 15px;
     letter-spacing: 0.2em;
 }
@@ -82,7 +81,6 @@ body {
 .pillow {
     display: inline-block;
     width: 100px;
-    margin:50x;
     grid-row: 1/2;
     grid-column:3/6;
 }
