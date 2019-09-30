@@ -1,0 +1,288 @@
+
+/* default options */
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #6B7A8F;
+}
+
+/* navigation bar */
+.topnav {
+    background-color: #6B7A8F;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 1000px;
+    height: 60px;
+    margin:0px;
+    position: fixed;
+    top:0px;
+    left:0px;
+    padding-top: 20px;
+    opacity:0.95;
+    border-bottom: 1px #F7882F solid;
+    align-items: baseline;
+}
+
+.perfectfit{
+    font-size: 25px;
+    width: 200px;
+    height: 40px;
+    background-color: #F7C331;
+    text-align:center;
+    color: #6B7A8F;
+    font-weight: bold;
+    position:fixed;
+    right: 0px;
+    margin-top: 1px;
+    opacity: 0.95;
+    border-radius: 5px;
+}
+
+/*start of Landing Page */
+.main{
+    margin-top: 80px;
+    padding-left: 15px;
+    display:grid;
+    width: auto;
+    min-width: 100px;
+    height:auto;
+    min-height:0;
+    min-width:0;
+    grid-template: 1fr 1fr / repeat(7, minmax(130px,1fr));
+    align-content: center;
+    grid-gap: 10px;
+    overflow: hidden;
+}
+
+#home {
+    font-weight: bold;
+    font-size: 40px;
+    color: #F7882F;
+    text-align: bottom;
+    padding-left: 15px;
+    letter-spacing: 0.2em;
+}
+
+.menu-item {
+    font-size: 25px;
+    color: #F7882F;
+    padding-right: 30px;
+}
+
+.side-top {
+    font-size: 30px;
+    color: #F7882F;
+    padding-right: 20px;
+}
+
+
+.pillow {
+    display: inline-block;
+    width: 100px;
+    margin:50x;
+    grid-row: 1/2;
+    grid-column:3/6;
+}
+
+#pillow-one {
+    grid-column:2/4;
+
+}
+
+#pillow-two{
+    grid-column:4/6;
+}
+
+#pillow-three {
+    grid-column-start:6;
+}
+
+.reviews {
+    font-size:20px;
+    grid-row-start:2;
+    grid-column: 1/5;
+    justify-self: stretch;
+    background-color: #DCC7AA;
+    text-align: center;
+    color:#6B7A8F;
+    overflow:hidden;
+}
+
+.customer{
+    display: inline-block;
+    border: 1px #6B7A8F solid;
+}
+
+#review-1{
+    text-align:left;
+    padding: 20px;
+}
+
+#review-2{
+    text-align: left;
+    padding:20px;
+}
+
+.instagram {
+    background-image: url('pillow4.png');
+    grid-column: 5/8;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    text-align:center;
+    color: #F7C331;
+    font-size: 25px;
+}
+
+.pillow {
+    margin-bottom:0px;
+}
+
+.caption {
+    text-align: left;
+    top:0px;
+    font-size: 20px;
+    position: relative;
+    margin-top: 0px;
+    width: 150px;
+    color: white;
+}
+
+.browse {
+    grid-column-start: 1;
+    text-transform: uppercase;
+    color: white;
+}
+
+.top-item{
+    align-self:center;
+}
+
+/* Start of the Browse page */
+.main-1{
+    margin-top: 100px;
+    padding-left: 15px;
+    display:grid;
+    width: auto;
+    min-width: 100px;
+    height:auto;
+    min-height:0;
+    min-width:0;
+    grid-template-areas:
+    "header header header"
+    "one two three";
+    align-content: center;
+    grid-gap: 20px;
+    overflow: hidden;
+}
+
+.browse-title {
+    grid-area:header;
+    text-align: center;
+}
+
+.product-1 {
+    grid-area: one;
+}
+
+.product-2 {
+    grid-area: two;
+}
+
+.product-3{
+    grid-area: three;
+}
+
+.pillow-product{
+    border-radius:5px;
+}
+
+.product-title{
+letter-spacing:.1em;
+color: white;
+}
+
+.Add-to-cart{
+    background-color:yellow;
+    font-size:20px;
+}
+
+/* Start of the Product Details Page */
+.main-2{
+    margin-top: 100px;
+    padding-top:20px;
+    padding-left: 15px;
+    display:grid;
+    width: auto;
+    min-width: 100px;
+    height:auto;
+    min-height:0;
+    grid-template: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%/ 300px 200px 150px;
+    align-content: center;
+    grid-gap: 10px;
+    overflow: hidden;
+}
+
+
+.couch-pillow-picture {
+    grid-area: 1 / 1 / 5 / 2;
+}
+
+#description {
+    grid-area: 6/1/10/2;
+}
+
+#product-title {
+    grid-area: 1/2/4/3;
+}
+
+#Add-to-cart {
+    grid-area: 3/2/4/3;
+}
+
+#product-myplace {
+    grid-area: 3/3/4/4;
+}
+
+#quant {
+    grid-area:4/2/5/3;
+}
+
+#colors {
+    grid-area: 5/2/6/3;
+}
+
+#blue-denim {
+    grid-area: 6/2/7/3;
+}
+
+#rainy-day {
+    grid-area:7/2/8/3;
+}
+
+#morning-haze {
+    grid-area: 8/2/9/3;
+}
+
+#after-school {
+    grid-area: 9/2/10/3;
+}
+
+#filling {
+    grid-area:5/3/6/4;
+}
+
+#duck-down{
+    grid-area: 6/3/7/4;
+}
+
+#memory-foam{
+grid-area: 7/3/8/4;
+}
+
+#hypo-poly {
+grid-area: 8/3/9/4;
+}
+
