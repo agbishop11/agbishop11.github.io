@@ -207,6 +207,46 @@ color: white;
     font-size:20px;
 }
 
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+.price{
+    color: grey;
+    font-size: 22px;
+}
+
+.cart-button, .myplace-button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+button :hover{
+    opacity:0.7;
+}
+
+.cart-button{
+     background-color: #000;
+}
+
+.myplace-button {
+    background-color:green;
+}
+
+
+
+
+
 /* Start of the Product Details Page */
 .main-2{
     margin-top: 100px;
