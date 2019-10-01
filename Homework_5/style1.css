@@ -333,6 +333,11 @@ color: white;
     width:45%;
     margin-top:50px;
 }
+
+.right-col h2{
+    color: #6B7A8F;
+}
+
 /*top container for text in right col*/
 .product-description{
     border-bottom:1px solid #E1E8EE;
@@ -341,18 +346,11 @@ color: white;
 
 /*product name */
 .product-description h1{
-    font-weight:300;
+    font-weight:500;
     font-size:52px;
-    color: #43484D;
-    letter-spacing:-2px;
+    color: #6B7A8F;
 }
 
-.product-description p{
-    font-size:16px;
-    font-weight:300px;
-    color:#86939E;
-    line-height:24px;
-}
 
 .product-color {
     margin-bottom: 30px;
