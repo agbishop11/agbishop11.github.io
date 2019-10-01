@@ -25,46 +25,8 @@ html,body {
     top:0px;
     left:0px;
     padding-top: 20px;
-    opacity:0.95;
-    border-bottom: 1px #F7882F solid;
     align-items: baseline;
-}
-
-.perfectfit{
-    font-size: 25px;
-    width: 200px;
-    height: 40px;
-    background-color: #F7C331;
-    text-align:center;
-    color: #6B7A8F;
-    font-weight: bold;
-    position:fixed;
-    top:80px;
-    right: 0px;
-    margin-top: 1px;
-    opacity: 0.95;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.perfectfit:hover{
-    opacity:0.7;
-}
-
-/*start of Landing Page */
-.main{
-    margin-top: 80px;
-    padding-left: 15px;
-    display:grid;
-    width: auto;
-    min-width: 100px;
-    height:auto;
-    min-height:0;
-    min-width:0;
-    grid-template: 1fr 1fr / repeat(7, minmax(130px,1fr));
-    align-content: center;
-    grid-gap: 10px;
-    overflow: hidden;
+    z-index:5;
 }
 
 #home {
@@ -87,40 +49,100 @@ html,body {
     padding-right: 20px;
 }
 
-#home:hover, .menu-item:hover, .side-top:hover{
+
+.perfectfit{
+    font-size: 25px;
+    width: 200px;
+    height: 40px;
+    background-color: #F7C331;
+    text-align:center;
+    color: #6B7A8F;
+    font-weight: bold;
+    position:fixed;
+    top:80px;
+    right: 0px;
+    margin-top: 0;
+    opacity: 0.95;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#home:hover, .menu-item:hover, .side-top:hover, .perfectfit:hover{
     opacity:0.7;
 }
 
+/*start of Landing Page */
 
-.pillow {
-    display: inline-block;
-    width: 100px;
-    grid-row: 1/2;
-    grid-column:3/6;
+
+/*.main{
+    margin-top: 80px;
+    padding-left: 15px;
+    display:grid;
+    width: auto;
+    min-width: 100px;
+    height:auto;
+    min-height:0;
+    min-width:0;
+    grid-template: 1fr 1fr / repeat(7, minmax(130px,1fr));
+    align-content: center;
+    grid-gap: 10px;
+    overflow: hidden;
+}
+*/
+
+.main{
+    margin-top: 80px;
+    width:100%;
 }
 
-#pillow-one {
-    grid-column:2/4;
-
+.row-1{
+    width:100%;
+    height:350px;
+    overflow:scroll;
 }
 
-#pillow-two{
-    grid-column:4/6;
+.row-1 div{
+
+    min-width:250px;
+    width:20%;
+    float:left;
+    margin: auto;
+    text-align: center;
+    padding:15px;
 }
 
-#pillow-three {
-    grid-column-start:6;
+.browse {
+    text-transform: uppercase;
+    color: black;
+}
+
+.caption {
+    text-align: center;
+    top:0px;
+    font-size: 20px;
+    position: relative;
+    margin-top: 0px;
+    width: 100%;
+    color: black;
+}
+
+.row-2{
+    width:100%;
+    height:350px;
+    overflow:scroll;
 }
 
 .reviews {
     font-size:20px;
-    grid-row-start:2;
-    grid-column: 1/5;
-    justify-self: stretch;
     background-color: #DCC7AA;
     text-align: center;
     color:#6B7A8F;
     overflow:hidden;
+}
+
+.reviews p{
+    margin: 20px;
+    padding:20px;
 }
 
 .customer{
@@ -128,59 +150,39 @@ html,body {
     border: 1px #6B7A8F solid;
 }
 
-#review-1{
-    text-align:left;
-    padding: 20px;
-}
-
-#review-2{
-    text-align: left;
-    padding:20px;
+.row-3{
+    width:100%;
+    height:350px;
+    background-image: url('pillow4.png');
+    opacity:0.8;
 }
 
 .instagram {
-    background-image: url('pillow4.png');
-    grid-column: 5/8;
     overflow: hidden;
     background-repeat: no-repeat;
     text-align:center;
     color: #F7C331;
     font-size: 25px;
+    margin-top:0;
+
+
 }
 
-.pillow {
-    margin-bottom:0px;
-}
 
-.caption {
-    text-align: left;
-    top:0px;
-    font-size: 20px;
-    position: relative;
-    margin-top: 0px;
-    width: 150px;
-    color: white;
+.row-1 div:hover, .reviews p:hover, .row-3 h2:hover{
+    opacity: 0.7;
+    cursor: pointer;
 }
-
-.browse {
-    grid-column-start: 1;
-    text-transform: uppercase;
-    color: white;
-}
-
-.top-item{
-    align-self:center;
-}
-
 /* Start of the Browse page */
 
 .new-main-1{
     margin-top: 80px;
+    width:100%;
 }
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0 0.2);
-    max-width: 300px;
+    max-width: 400px;
     width:33.33%;
     float:left;
     margin: auto;
@@ -209,13 +211,8 @@ html,body {
     font-size: 18px;
 }
 
-.cart-button:hover {
+.cart-button:hover, .myplace-button:hover {
     opacity: 0.7;
-}
-
-.myplace-button:hover{
-        opacity: 0.7;
-
 }
 
 .cart-button{
