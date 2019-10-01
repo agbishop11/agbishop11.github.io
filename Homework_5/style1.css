@@ -66,6 +66,7 @@ html,body {
     opacity: 0.95;
     border-radius: 5px;
     cursor: pointer;
+    z-index: 5
 }
 
 /*nav interactivity */
