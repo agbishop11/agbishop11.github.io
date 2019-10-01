@@ -1,5 +1,5 @@
 
-/* default options */
+/* basic default styling */
 a {
     text-decoration: none;
 }
@@ -10,7 +10,6 @@ html,body {
     margin:0;
     font-family: 'Roboto', sans-serif;
 }
-
 
 /* navigation bar */
 .topnav {
@@ -37,19 +36,21 @@ html,body {
     letter-spacing: 0.2em;
 }
 
+/*text in nav*/
 .menu-item {
     font-size: 25px;
     color: #F7882F;
     padding-right: 30px;
 }
 
+/*icons in nav */
 .side-top {
     font-size: 30px;
     color: #F7882F;
     padding-right: 20px;
 }
 
-
+/* perfectfit button right below nav*/
 .perfectfit{
     font-size: 25px;
     width: 200px;
@@ -67,40 +68,30 @@ html,body {
     cursor: pointer;
 }
 
+/*nav interactivity */
 #home:hover, .menu-item:hover, .side-top:hover, .perfectfit:hover{
     opacity:0.7;
 }
 
+
+
+
 /*start of Landing Page */
 
 
-/*.main{
-    margin-top: 80px;
-    padding-left: 15px;
-    display:grid;
-    width: auto;
-    min-width: 100px;
-    height:auto;
-    min-height:0;
-    min-width:0;
-    grid-template: 1fr 1fr / repeat(7, minmax(130px,1fr));
-    align-content: center;
-    grid-gap: 10px;
-    overflow: hidden;
-}
-*/
-
+/*landing page container*/
 .main{
     margin-top: 80px;
     width:100%;
 }
 
+/* top row of landing page*/
 .row-1{
     width:100%;
     height:350px;
     overflow:scroll;
 }
-
+/* row 1 elements*/
 .row-1 div{
 
     min-width:250px;
@@ -112,15 +103,19 @@ html,body {
     padding-right:30px;
 }
 
-.pillow img{
-    box-shadow: 0px 4px 4px 0px #000;
-}
+/* Shop text in row 1*/
 
 .browse {
     text-transform: uppercase;
     color: black;
 }
 
+/* product picture shading*/
+.pillow img{
+    box-shadow: 0px 4px 4px 0px #000;
+}
+
+/* product picture captions*/
 .caption {
     text-align: center;
     padding-top:10px;
@@ -131,12 +126,14 @@ html,body {
     color: black;
 }
 
+/* second row of landing page*/
 .row-2{
     width:100%;
     height:350px;
     overflow:scroll;
 }
 
+/*elements in row 2*/
 .reviews {
     font-size:20px;
     background-color: #DCC7AA;
@@ -155,6 +152,7 @@ html,body {
     border: 1px #6B7A8F solid;
 }
 
+/*third row of landing page*/
 .row-3{
     width:100%;
     height:350px;
@@ -169,22 +167,26 @@ html,body {
     color: #F7C331;
     font-size: 40px;
     margin-top:0;
-
-
 }
 
-
+/*interactivity for main body of landing page*/
 .row-1 div:hover, .reviews p:hover, .row-3 h2:hover{
     opacity: 0.7;
     cursor: pointer;
 }
+
+
+
+
 /* Start of the Browse page */
 
+/*container for main body*/
 .new-main-1{
     margin-top: 80px;
     width:100%;
 }
 
+/*product card containers*/
 .card {
     max-width: 400px;
     width:33.33%;
@@ -214,6 +216,7 @@ html,body {
     font-size: 22px;
 }
 
+/* product buttons */
 .cart-button, .myplace-button {
     border: none;
     outline: 0;
@@ -225,10 +228,6 @@ html,body {
     font-size: 18px;
 }
 
-.cart-button:hover, .myplace-button:hover {
-    opacity: 0.7;
-}
-
 .cart-button{
      background-color: #000;
 }
@@ -237,8 +236,13 @@ html,body {
     background-color:green;
 }
 
+/*button interactivity*/
+.cart-button:hover, .myplace-button:hover {
+    opacity: 0.7;
+}
 
-/* legacy old styling for browse page
+
+/* legacy styling for browse page
 .main-1{
     margin-top: 100px;
     padding-left: 15px;
@@ -294,6 +298,7 @@ color: white;
 
 /* Start of the Product Details Page */
 
+/*container for main body */
 .new-main-2 {
     max-width:1200px;
     margin: 0 auto;
@@ -302,18 +307,14 @@ color: white;
     display: flex;
 }
 
+/* container for left side of main body*/
 .left-col {
     width:55%;
     position:relative;
     margin: 25px;
 }
 
-
-.right-col {
-    width:45%;
-    margin-top:50px;
-}
-
+/*product image*/
 .left-col img{
     box-shadow: 0px 4px 4px 0px #000;
     width:100%;
@@ -321,25 +322,24 @@ color: white;
     left:0;
     top:0;
 }
-
+/*product details text block */
 .left-col p{
     position:relative;
     top:600px;
 }
 
+/*container for right side of main body*/
+.right-col {
+    width:45%;
+    margin-top:50px;
+}
+/*top container for text in right col*/
 .product-description{
     border-bottom:1px solid #E1E8EE;
     margin-bottom:20px;
 }
 
-.product-description span{
-    font-size: 12px;
-    color:#358ED7;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-decoration: none;
-    }
-
+/*product name */
 .product-description h1{
     font-weight:300;
     font-size:52px;
@@ -371,10 +371,7 @@ color: white;
     cursor: pointer;
 }
 
-.color-choice button:hover{
-    opacity:0.7;
-}
-
+/* color choice buttons*/
 #yellow{
     background-color:gold;
 }
@@ -391,6 +388,7 @@ color: white;
     background-color: teal;
 }
 
+/*filling choice options*/
 .filling-config{
     margin-bottom:20px;
 }
@@ -406,21 +404,17 @@ color: white;
     margin:10px;
 }
 
-.filling-config button:hover{
-    opacity:0.7;
-}
-
 .filling-head{
     border-bottom: 1px solid #E1E8EE;
     margin-bottom: 20px;
 }
 
-.product-price{
+/*add to cart and add to myplace buttons*/
+.checkout-buttons{
     margin-right:10px;
 }
 
-
-.product-price button{
+.checkout-buttons button{
     cursor:pointer;
     border-radius: 6px;
     margin:10px;
@@ -429,7 +423,8 @@ color: white;
 
 }
 
-.product-price button:hover{
+/*interactivity for product details page*/
+.product-price button:hover, .filling-config button:hover, .color-choice button:hover{
     opacity:0.7;
 }
 
