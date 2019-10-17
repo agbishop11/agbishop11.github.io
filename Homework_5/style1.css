@@ -1,5 +1,6 @@
 
 /* basic default styling */
+
 a {
     text-decoration: none;
 }
@@ -295,8 +296,83 @@ color: white;
 */
 
 
+/*start of Shopping Cart page */
+.shopping-cart {
+    width: 900px;
+    height: 700px;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background: #F7C331;
+    box-sizing: border-box;
+}
 
+.shopping-cart-title {
+    height: 80px;
+    border-bottom: 1px solid #E1E8EE;
+    padding: 20px 30px;
+    color: #5E6977;
+    font-size: 40px;
+    font-weight: 400;
+}
 
+.item{
+    padding:20px 30px;
+    height: 200px;
+    display: flex;
+    border-top: 1px solid #E1E8EE;
+    border-bottom: 1px solid #E1E8EE;
+}
+
+.image {
+    margin-right: 50px;
+}
+
+.item-desc {
+    padding-top: 10px;
+    margin-right: 60px;
+    width: 120px;
+}
+
+.item-desc span {
+    display: block;
+    font-size: 14px;
+    color: #43484D;
+    font-weight: 500;
+}
+
+.item-desc span:first-child {
+  margin-bottom: 5px;
+}
+
+.item-desc span:last-child {
+  font-weight: 300;
+  margin-top: 8px;
+  color: #86939E;
+}
+
+.qty{
+    padding-top: 20px;
+    margin-right: 60px;
+}
+
+.qty input{
+    border: none;
+    text-align: center;
+    width:20px;
+    font-size: 16px;
+    font-weight:300;
+}
+
+.total-price {
+    width: 84px;
+    padding-top: 28px;
+    text-align: center;
+    font-size: 16px;
+    color: #43484D;
+    font-weight: 300;
+}
 /* Start of the Product Details Page */
 
 /*container for main body */
