@@ -52,6 +52,16 @@ html,body {
     padding-right: 20px;
 }
 
+#lblCartCount {
+    font-size: 14px;
+    background: #ff0000;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -10px;
+    border-radius: 5px
+}
+
 /* perfectfit button right below nav*/
 .perfectfit{
     font-size: 25px;
@@ -345,7 +355,6 @@ color: white;
 
 .image {
     margin-right: 50px;
-    border: 1px solid black;
     overflow:hidden;
     max-width:100%;
     height: auto;
@@ -411,6 +420,9 @@ color: white;
     border:none;
     cursor: pointer;
 }
+.less{
+    margin-left: 10px;
+}
 
 .subtotal {
     box-sizing: border-box;
@@ -462,6 +474,21 @@ color: white;
     padding-right: 25px;
 }
 
+.remove {
+    padding: 20px;
+}
+
+.rmv-button {
+    color: white;
+    background-color: #EB5757;
+    border-radius: .3em;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 15px;
+    align-self: center;
+    cursor: pointer;
+
+}
 
 /* Start of the Product Details Page */
 
