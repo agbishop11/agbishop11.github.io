@@ -23,7 +23,7 @@
         <span >
             <a class='side-top' href=''><i class="fas fa-search"></i></a>
             <a class='side-top' href=''><i class="fas fa-user"></i></a>
-            <a class='side-top' href='shopping_cart_1.html'><i class="fas fa-shopping-cart"></i></a>
+            <a class='side-top' href='shopping_cart_1.html'><i class="fas fa-shopping-cart" id='cart-icon'></i><span id='lblCartCount'>0</span></a>
         </span>
     </div>
 
@@ -103,7 +103,7 @@
 <!-- start of current html code-->
     <div class='new-main-2'>
         <div class='left-col'>
-            <img src='pillow1.png' alt="Best Pillow ever">
+            <img class='shop-item-image' src='pillow1.png' alt="Best Pillow ever">
              <p>These pillows are good. <br>
                 Some say these pillows are great, they do not exaggerate. <br>
                 Oprah has endorsed these pillows.
@@ -111,8 +111,8 @@
         </div>
         <div class='right-col'>
             <div class='product-description'>
-                <h1>Couch Pillow</h1>
-                <h2>$19.99</h2>
+                <h1 class='prod-title'>Couch Pillow</h1>
+                <h2 class='product-price'>$19.99</h2>
             </div>
             <div class='product-config'>
                 <div class='product-color'>
@@ -133,12 +133,16 @@
                     </div>
                 </div>
                 <div class='checkout-buttons'>
-                    <button class='cart-button'>Add to cart</button>
+                    <button class='cart-button' id='cart-button'>Add to cart</button>
                     <button class='myplace-button'>Add to MyPlace</button>
                 </div>
             </div>
         </div>
     </div>
 
+<script src='app.js' async type='text/javascript'></script>
+
 </body>
+
+</html>
 
