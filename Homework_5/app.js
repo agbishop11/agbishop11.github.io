@@ -21,9 +21,17 @@ function updateTotalCart() {
         var qty = qtyHolder.value
         total = (total + (price * qty))
     }
-    let newTotal='$' +total.toFixed(2)
-    document.getElementById('subtotal').innerText=newTotal
+    let newTotal=total.toFixed(2)
+    document.getElementById('subtotal').innerText='$'+newTotal
+    var totalFinal= parseFloat(document.getElementById('total-final').innerText.replace('$',''));
+    var taxCost= parseFloat(document.getElementById('tax-cost').innerText.replace('$',''));
+    var shippingCost= parseFloat(document.getElementById('shipping-cost').innerText.replace('$',''));
+    let ultimateTotal=
+
+    console.log(ultimateTotal)
+
 }
+
 
 var qtyInputs = document.getElementsByClassName('cart-qty')
 for (var i=0; i < qtyInputs.length; i++) {
