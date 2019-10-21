@@ -424,6 +424,7 @@ color: white;
     margin-left: 10px;
 }
 
+
 .subtotal {
     box-sizing: border-box;
     margin: 0 auto;
@@ -561,22 +562,23 @@ color: white;
     font-size: 14px;
     margin:10px;
     cursor: pointer;
+     background-color:#fff;
 }
 
 /* color choice buttons*/
-#yellow{
+#yellow:hover{
     background-color:gold;
 }
 
-#blue-denim {
+#blue-denim:hover {
     background-color: blue;
 }
 
-#purple{
+#purple:hover{
     background-color:purple;
 }
 
-#teal {
+#teal:hover {
     background-color: teal;
 }
 
