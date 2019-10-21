@@ -49,12 +49,13 @@
                 <span>Duck Down</span>
                 <span>Rainy Day</span>
             </div>
+
             <div class='qty'>
-                <button class='less' type='button' name='button'>
+                <button class='less' type='button' name='button' onclick='decreaseValue1()'>
                     <i class="fas fa-minus"></i>
                 </button>
-                <input type='text' name='name' value='1' class='cart-qty'>
-                <button class='more' type='button' name='button'>
+                <input type='text' name='hi' value='1' id='number-1' class='cart-qty cart-qty-1'>
+                <button class='more' type='button' name='button' onclick='increaseValue1()'>
                     <i class="fas fa-plus"></i>
                 </button>
                 <div class='remove'>
@@ -74,11 +75,11 @@
                 <span>Morning Haze</span>
             </div>
             <div class='qty qty-2'>
-                <button class='less' type='button' name='button'>
+                <button class='less' type='button' name='button' onclick='decreaseValue2()'>
                     <i class="fas fa-minus"></i>
                 </button>
-                <input type='text' name='name' value='1' class='cart-qty cart-qty-2'>
-                <button class='more more-2' type='button' name='button'>
+                <input type='text' name='name' value='1' id='number-2' class='cart-qty cart-qty-2'>
+                <button class='more more-2' type='button' name='button' onclick='increaseValue2()'>
                     <i class="fas fa-plus"></i>
                 </button>
                 <div class='remove'>
@@ -98,11 +99,11 @@
                 <span>Morning Haze</span>
             </div>
             <div class='qty'>
-                <button class='less' type='button' name='button'>
+                <button class='less' type='button' name='button' onclick='decreaseValue3()'>
                     <i class="fas fa-minus"></i>
                 </button>
-                <input type='text' name='name' value='1' class='cart-qty'>
-                <button class='more' type='button' name='button'>
+                <input type='text' name='name' id='number-3' value='1' class='cart-qty'>
+                <button class='more' type='button' name='button' onclick='increaseValue3()'>
                     <i class="fas fa-plus"></i>
                 </button>
                 <div class='remove'>
@@ -137,7 +138,11 @@
         </div>
     </div>
 
-    <script src='app.js' async= type='text/javascript'></script>
+    <script src='app.js' defer type='text/javascript'></script>
 
 </body>
 </html>
+
+
+
+
