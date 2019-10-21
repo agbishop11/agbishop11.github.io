@@ -10,12 +10,12 @@ html,body {
     width:100%;
     margin:0;
     font-family: 'Roboto', sans-serif;
-    background-color: #FFF6E7;
+    background-color: #FFFFFF;
 }
 
 /* navigation bar */
 .topnav {
-    background-color: #6B7A8F;
+    background-color: #40B4C3;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -33,7 +33,7 @@ html,body {
 #home {
     font-weight: bold;
     font-size: 40px;
-    color: #F7882F;
+    color: #FFFFFF;
     padding-left: 15px;
     letter-spacing: 0.2em;
 }
@@ -41,14 +41,14 @@ html,body {
 /*text in nav*/
 .menu-item {
     font-size: 25px;
-    color: #F7882F;
+    color: #FFFFFF;
     padding-right: 30px;
 }
 
 /*icons in nav */
 .side-top {
     font-size: 30px;
-    color: #F7882F;
+    color: #FFFFFF;
     padding-right: 20px;
 }
 
@@ -67,9 +67,9 @@ html,body {
     font-size: 25px;
     width: 200px;
     height: 40px;
-    background-color: #F7C331;
+    background-color: rgb(240,220,190);
     text-align:center;
-    color: #6B7A8F;
+    color: #3E5EB2;
     font-weight: bold;
     position:fixed;
     top:80px;
@@ -407,9 +407,9 @@ color: white;
     width: 84px;
     padding-top: 20px;
     text-align: center;
-    font-size: 16px;
-    color: #43484D;
-    font-weight: 300;
+    font-size: 30px;
+    color: #3E5EB2;
+    font-weight: 800;
 }
 
 .less, .more {
@@ -457,7 +457,7 @@ color: white;
     }
 
 .continue-shopping, .checkout{
-    background-color: green;
+    background-color: #3E5EB2;
     padding: 10px;
     border-radius: 35px;
     color: white;
@@ -465,9 +465,11 @@ color: white;
 }
 
 .checkout {
-    width: 300px;
+    width: 250px;
     display: block;
-    text-align: center
+    text-align: center;
+    font-size: 30px;
+    height: 40px;
 
 }
 
