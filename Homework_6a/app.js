@@ -1,3 +1,5 @@
+
+//remove item from cart functionality
 var rmvCartItemsButton = document.getElementsByClassName('rmv-button')
 for (var i=0; i < rmvCartItemsButton.length; i++) {
     var button=rmvCartItemsButton[i]
@@ -8,7 +10,7 @@ for (var i=0; i < rmvCartItemsButton.length; i++) {
     })
 }
 
-
+//updating the shopping cart subtotal
 function updateTotalCart() {
     var shoppingCartContainer = document.getElementsByClassName('shopping-cart')[0]
     var shoppingCartItems = shoppingCartContainer.getElementsByClassName('item')
@@ -26,24 +28,8 @@ function updateTotalCart() {
     var totalFinal= parseFloat(document.getElementById('total-final').innerText.replace('$',''));
     var taxCost= parseFloat(document.getElementById('tax-cost').innerText.replace('$',''));
     var shippingCost= parseFloat(document.getElementById('shipping-cost').innerText.replace('$',''));
-    let ultimateTotal=
-
-    console.log(ultimateTotal)
-
 }
 
-
-var qtyInputs = document.getElementsByClassName('cart-qty')
-for (var i=0; i < qtyInputs.length; i++) {
-    var input = qtyInputs[i]
-    input.addEventListener('change', function(event) {
-        var inputChanged = event.target
-        if (isNaN(inputChanged.value)) {
-            inputChanged.value=1
-        }
-    updateTotalCart()
-    })
-}
 
 
 //let qtyValue = document.getElementsByClassName('cart-qty-1')[0]
@@ -65,6 +51,10 @@ for (var i=0; i < increaseQty.length; i++) {
 }`
 
 
+
+
+//update the cart icon with number of items currently in cart
+//increasing cart
 function updateCartIcon() {
 let cartIcon = parseInt(document.getElementById('lblCartCount').innerText);
 total = cartIcon
@@ -73,17 +63,41 @@ document.getElementById('lblCartCount').innerText = total
 console.log(total);
 }
 
-
-//update the cart icon with number of items currently in cart
 let browseBuy = document.getElementsByClassName('cart-button')
 console.log(browseBuy)
 for (var i=0; i < browseBuy.length; i++) {
     var button=browseBuy[i]
     button.addEventListener('click', function() {
-        console.log('log')
         updateCartIcon()
     })
 }
+
+var qtyInputs = document.getElementsByClassName('cart-qty')
+for (var i=0; i < qtyInputs.length; i++) {
+    var input = qtyInputs[i]
+    input.addEventListener('change', function(event) {
+        var inputChanged = event.target
+        if (isNaN(inputChanged.value)) {
+            inputChanged.value=1
+        }
+    updateTotalCart()
+    })
+}
+
+//decreasing the cart from the shopping cart page
+function decreaseCartIcon(){
+  let cartIcon = parseInt(document.getElementById('lblCartCount').innerText);
+total = cartIcon
+total = total -1
+document.getElementById('lblCartCount').innerText = total
+}
+for (var i=0; i < rmvCartItemsButton.length; i++) {
+    var button=rmvCartItemsButton[i]
+    button.addEventListener('click', function() {
+        decreaseCartIcon()
+    })
+}
+
 
 //change filling of pillow
 let fillingChoiceButton = document.getElementsByClassName('filling-option')
