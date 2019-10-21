@@ -19,9 +19,10 @@ function updateTotalCart() {
         var qtyHolder = singleItem.getElementsByClassName('cart-qty')[0]
         var price = parseFloat(priceHolder.innerText.replace('$', ''))
         var qty = qtyHolder.value
-        total = total + (price * qty)
+        total = (total + (price * qty))
     }
-    document.getElementById('subtotal').innerText=total
+    let newTotal='$' +total.toFixed(2)
+    document.getElementById('subtotal').innerText=newTotal
 }
 
 var qtyInputs = document.getElementsByClassName('cart-qty')
