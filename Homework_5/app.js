@@ -36,7 +36,11 @@ for (var i=0; i < qtyInputs.length; i++) {
     })
 }
 
-var increaseQty = document.getElementsByClassName('more')
+
+//let qtyValue = document.getElementsByClassName('cart-qty-1')[0]
+
+
+`var increaseQty = document.getElementsByClassName('more')
 for (var i=0; i < increaseQty.length; i++) {
     var button = increaseQty[i]
     var changedNum = document.getElementsByClassName('cart-qty')[0].value
@@ -49,7 +53,7 @@ for (var i=0; i < increaseQty.length; i++) {
     document.getElementsByClassName('cart-qty')[0].textContent = changedNum
 
     updateTotalCart()
-}
+}`
 
 
 function updateCartIcon() {
@@ -58,16 +62,55 @@ total = cartIcon
 total = total + 1
 document.getElementById('lblCartCount').innerText = total
 console.log(total);
-//let cartIconNum = parseInt(cartIcon.getElementById('lblCartCount'));
-//cartIconNum++;
 }
 
 
-let buyProduct = document.getElementById('cart-button')
-buyProduct.onclick = updateCartIcon;
+//update the cart icon with number of items currently in cart
+let browseBuy = document.getElementsByClassName('cart-button')
+console.log(browseBuy)
+for (var i=0; i < browseBuy.length; i++) {
+    var button=browseBuy[i]
+    button.addEventListener('click', function() {
+        console.log('log')
+        updateCartIcon()
+    })
+}
 
+//change filling of pillow
+let fillingChoiceButton = document.getElementsByClassName('filling-option')
+console.log(fillingChoiceButton)
+for (var i=0; i <fillingChoiceButton.length; i++) {
+    var button=fillingChoiceButton[i];
+    button.addEventListener('click', function (event) {
+        for (var u=0; u <fillingChoiceButton.length; u++) {
+            console.log(fillingChoiceButton[u])
+        fillingChoiceButton[u].style.backgroundColor = '';
+        fillingChoiceButton[u].style.fontWeight = '';
+        fillingChoiceButton[u].style.color = '';
+    }
+        var buttonClicked = event.target;
+        buttonClicked.style.backgroundColor = 'grey';
+        buttonClicked.style.fontWeight = 700;
+        buttonClicked.style.color = 'white';
+    })
+}
 
-var theButton = document.getElementById('cart-button');
+//change color of selected color choice
+let colorChoiceButton = document.getElementsByClassName('color-choice-btn')
+for (var i=0; i <colorChoiceButton.length; i++) {
+    var button=colorChoiceButton[i];
+    button.addEventListener('click', function (event) {
+        for (var u=0; u <colorChoiceButton.length; u++) {
+        colorChoiceButton[u].style.backgroundColor = '';
+        colorChoiceButton[u].style.fontWeight = '';
+        colorChoiceButton[u].style.color = '';
+    }
+        var buttonClicked = event.target;
+        buttonClicked.style.backgroundColor = 'grey';
+        buttonClicked.style.fontWeight = 700;
+        buttonClicked.style.color = 'white';
+    })
+}
 
 `theButton.addEventListener('click', function(event) {
     var button = event.target
@@ -77,7 +120,7 @@ var theButton = document.getElementById('cart-button');
     var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src;
     console.log(title, price, imageSrc);
     addItemToCart(title,price,imageSrc);
-})`
+})
 
 function addItemToCart(title,price,imageSrc) {
     var shoppingCartRow = document.createElement('div');
@@ -85,4 +128,56 @@ function addItemToCart(title,price,imageSrc) {
     var cartItems = document.getElementsByClassName('item')[0];
     console.log(cartItems)
     //cartItems.append(shoppingCartRow);
+}`
+
+//shopping cart functions for the qty increase and decrease buttons
+function increaseValue1() {
+  var value = parseInt(document.getElementById('number-1').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  document.getElementById('number-1').value = value;
+  updateTotalCart()
+}
+
+function decreaseValue1() {
+  var value = parseInt(document.getElementById('number-1').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value < 1 ? value = 1 : '';
+  value--;
+  document.getElementById('number-1').value = value;
+  updateTotalCart()
+}
+
+function increaseValue2() {
+  var value = parseInt(document.getElementById('number-2').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  document.getElementById('number-2').value = value;
+  updateTotalCart()
+}
+
+function decreaseValue2() {
+  var value = parseInt(document.getElementById('number-2').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value < 1 ? value = 1 : '';
+  value--;
+  document.getElementById('number-2').value = value;
+  updateTotalCart()
+}
+
+function increaseValue3() {
+  var value = parseInt(document.getElementById('number-3').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  document.getElementById('number-3').value = value;
+  updateTotalCart()
+}
+
+function decreaseValue3() {
+  var value = parseInt(document.getElementById('number-3').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value < 1 ? value = 1 : '';
+  value--;
+  document.getElementById('number-3').value = value;
+  updateTotalCart()
 }
