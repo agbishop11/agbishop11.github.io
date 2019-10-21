@@ -437,6 +437,8 @@ color: white;
       display: inline-block;
       padding: 0 0 0 1em;
       text-align: right;
+      font-size: 18px;
+      font-weight: 700;
     }
 
 .total-row {
