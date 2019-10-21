@@ -1,5 +1,5 @@
 
-//remove item from cart functionality
+//Remove item from cart
 var rmvCartItemsButton = document.getElementsByClassName('rmv-button')
 for (var i=0; i < rmvCartItemsButton.length; i++) {
     var button=rmvCartItemsButton[i]
@@ -10,7 +10,9 @@ for (var i=0; i < rmvCartItemsButton.length; i++) {
     })
 }
 
-//updating the shopping cart subtotal
+
+
+//Update shopping cart subtotal
 function updateTotalCart() {
     var shoppingCartContainer = document.getElementsByClassName('shopping-cart')[0]
     var shoppingCartItems = shoppingCartContainer.getElementsByClassName('item')
@@ -32,29 +34,8 @@ function updateTotalCart() {
 
 
 
-//let qtyValue = document.getElementsByClassName('cart-qty-1')[0]
-
-
-`var increaseQty = document.getElementsByClassName('more')
-for (var i=0; i < increaseQty.length; i++) {
-    var button = increaseQty[i]
-    var changedNum = document.getElementsByClassName('cart-qty')[0].value
-    button.addEventListener('click', function(event) {
-        console.log('clicked')
-        var buttonClicked = event.target
-        changedNum++
-        console.log(changedNum)
-        })
-    document.getElementsByClassName('cart-qty')[0].textContent = changedNum
-
-    updateTotalCart()
-}`
-
-
-
-
-//update the cart icon with number of items currently in cart
-//increasing cart
+//Update the cart icon with number of items currently in cart
+//Increasing cart icon when items are added to cart
 function updateCartIcon() {
 let cartIcon = parseInt(document.getElementById('lblCartCount').innerText);
 total = cartIcon
@@ -84,14 +65,16 @@ for (var i=0; i < qtyInputs.length; i++) {
     })
 }
 
-//decreasing the cart from the shopping cart page
+
+
+//Decrease the cart icon when items are removed from shopping cart
 function decreaseCartIcon(){
   let cartIcon = parseInt(document.getElementById('lblCartCount').innerText);
 total = cartIcon
 total = total -1
 document.getElementById('lblCartCount').innerText = total
 }
-for (var i=0; i < rmvCartItemsButton.length; i++) {
+  for (var i=0; i < rmvCartItemsButton.length; i++) {
     var button=rmvCartItemsButton[i]
     button.addEventListener('click', function() {
         decreaseCartIcon()
@@ -99,7 +82,8 @@ for (var i=0; i < rmvCartItemsButton.length; i++) {
 }
 
 
-//change filling of pillow
+
+//Select filling of pillow
 let fillingChoiceButton = document.getElementsByClassName('filling-option')
 console.log(fillingChoiceButton)
 for (var i=0; i <fillingChoiceButton.length; i++) {
@@ -118,7 +102,9 @@ for (var i=0; i <fillingChoiceButton.length; i++) {
     })
 }
 
-//change color of selected color choice
+
+
+//Select color choice
 let colorChoiceButton = document.getElementsByClassName('color-choice-btn')
 for (var i=0; i <colorChoiceButton.length; i++) {
     var button=colorChoiceButton[i];
@@ -135,6 +121,9 @@ for (var i=0; i <colorChoiceButton.length; i++) {
     })
 }
 
+
+
+//code that may be used for assignment 6B (adding items to cart). Currently not working. Cannot access the src element for images.
 `theButton.addEventListener('click', function(event) {
     var button = event.target
     var shopItem = button.parentElement.parentElement.parentElement
@@ -150,10 +139,12 @@ function addItemToCart(title,price,imageSrc) {
     shoppingCartRow.innerText = title;
     var cartItems = document.getElementsByClassName('item')[0];
     console.log(cartItems)
-    //cartItems.append(shoppingCartRow);
+    cartItems.append(shoppingCartRow);
 }`
 
-//shopping cart functions for the qty increase and decrease buttons
+
+
+//shopping cart functions for the qty increase and decrease buttons. Currently unable to access the input values of the qty buttons, so put onclick directly into the HTML. Failed code is below the active code.
 function increaseValue1() {
   var value = parseInt(document.getElementById('number-1').value, 10);
   value = isNaN(value) ? 0 : value;
@@ -204,3 +195,18 @@ function decreaseValue3() {
   document.getElementById('number-3').value = value;
   updateTotalCart()
 }
+
+`var increaseQty = document.getElementsByClassName('more')
+for (var i=0; i < increaseQty.length; i++) {
+    var button = increaseQty[i]
+    var changedNum = document.getElementsByClassName('cart-qty')[0].value
+    button.addEventListener('click', function(event) {
+        console.log('clicked')
+        var buttonClicked = event.target
+        changedNum++
+        console.log(changedNum)
+        })
+    document.getElementsByClassName('cart-qty')[0].textContent = changedNum
+
+    updateTotalCart()
+}`
