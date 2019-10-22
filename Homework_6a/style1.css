@@ -308,6 +308,35 @@ color: white;
 
 
 /*start of Shopping Cart page */
+
+
+/*return to contineu shopping buttons*/
+.cont-shopping {
+    margin-top:60px;
+    margin-left: 190px;
+    padding: 5px;
+    float: left;
+    position:absolute;
+}
+
+/*formatting for the checkout button and the continue shopping buttons*/
+.continue-shopping, .checkout{
+    background-color: #3E5EB2;
+    padding: 10px;
+    border-radius: 35px;
+    color: white;
+    font-weight:700;
+}
+
+.checkout {
+    width: 175px;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    height: 25px;
+}
+
+/* shopping cart container*/
 .shopping-cart {
     padding-top: 80px;
     width: 900px;
@@ -319,15 +348,6 @@ color: white;
     box-sizing: border-box;
 }
 
-.cont-shopping {
-    margin-top:60px;
-    margin-left: 190px;
-    padding: 5px;
-    float: left;
-    position:absolute;
-
-}
-
 .shopping-cart-title {
     height: 80px;
     border-bottom: 1px solid #E1E8EE;
@@ -337,6 +357,7 @@ color: white;
     font-weight: 400;
 }
 
+/*row  elements within the container*/
 .item{
     padding:20px 30px;
     height: 300px;
@@ -345,6 +366,7 @@ color: white;
     border-bottom: 1px solid #E1E8EE;
 }
 
+/*alternative formatting for rows*/
 .item:nth-child(odd){
     background: rgba(107,122,143, 0.4);
 }
@@ -353,6 +375,7 @@ color: white;
     background-color: rgba(107,122,143, 0.2);
 }
 
+/*product image and details*/
 .image {
     margin-right: 50px;
     overflow:hidden;
@@ -378,11 +401,12 @@ color: white;
 }
 
 .item-desc span:last-child {
-  font-weight: 300;
-  margin-top: 8px;
-  color: #86939E;
+    font-weight: 300;
+    margin-top: 8px;
+    color: #86939E;
 }
 
+/*buttons that change quantity of product in cart*/
 .qty{
     padding-top: 20px;
     margin-right: 60px;
@@ -403,15 +427,6 @@ color: white;
     border: 1px solid black;
 }
 
-.total-price {
-    width: 84px;
-    padding-top: 20px;
-    text-align: center;
-    font-size: 30px;
-    color: #3E5EB2;
-    font-weight: 800;
-}
-
 .less, .more {
     width: 30px;
     height: 30px;
@@ -424,6 +439,31 @@ color: white;
     margin-left: 10px;
 }
 
+/* remove item from cart buttons*/
+.remove {
+    padding: 20px;
+}
+
+.rmv-button {
+    color: white;
+    background-color: #EB5757;
+    border-radius: .3em;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 15px;
+    align-self: center;
+    cursor: pointer;
+}
+
+/*price info beneath shopping cart container*/
+.total-price {
+    width: 84px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 30px;
+    color: #3E5EB2;
+    font-weight: 800;
+}
 
 .subtotal {
     box-sizing: border-box;
@@ -433,12 +473,12 @@ color: white;
     padding: 10px 150px 10px 10px;
 }
 
-  .subtotal span {
-      display: inline-block;
-      padding: 0 0 0 1em;
-      text-align: right;
-      font-size: 18px;
-      font-weight: 700;
+.subtotal span {
+    display: inline-block;
+    padding: 0 0 0 1em;
+    text-align: right;
+    font-size: 18px;
+    font-weight: 700;
     }
 
 .total-row {
@@ -456,44 +496,13 @@ color: white;
     width: 35%;
     }
 
-.continue-shopping, .checkout{
-    background-color: #3E5EB2;
-    padding: 10px;
-    border-radius: 35px;
-    color: white;
-    font-weight:700;
-}
-
-.checkout {
-    width: 175px;
-    display: block;
-    text-align: center;
-    font-size: 20px;
-    height: 25px;
-
-}
-
 #final{
     width: 140px;
     float: right;
     padding-right: 25px;
 }
 
-.remove {
-    padding: 20px;
-}
 
-.rmv-button {
-    color: white;
-    background-color: #EB5757;
-    border-radius: .3em;
-    font-weight: bold;
-    padding: 10px;
-    font-size: 15px;
-    align-self: center;
-    cursor: pointer;
-
-}
 
 /* Start of the Product Details Page */
 

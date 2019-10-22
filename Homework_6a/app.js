@@ -34,6 +34,8 @@ function updateTotalCart() {
 
 
 
+
+
 //Update the cart icon with number of items currently in cart
 //Increasing cart icon when items are added to cart
 function updateCartIcon() {
@@ -65,8 +67,6 @@ for (var i=0; i < qtyInputs.length; i++) {
     })
 }
 
-
-
 //Decrease the cart icon when items are removed from shopping cart
 function decreaseCartIcon(){
   let cartIcon = parseInt(document.getElementById('lblCartCount').innerText);
@@ -83,7 +83,9 @@ document.getElementById('lblCartCount').innerText = total
 
 
 
-//Select filling of pillow
+
+
+//Select product filling
 let fillingChoiceButton = document.getElementsByClassName('filling-option')
 console.log(fillingChoiceButton)
 for (var i=0; i <fillingChoiceButton.length; i++) {
@@ -104,7 +106,8 @@ for (var i=0; i <fillingChoiceButton.length; i++) {
 
 
 
-//Select color choice
+
+//Select product color
 let colorChoiceButton = document.getElementsByClassName('color-choice-btn')
 for (var i=0; i <colorChoiceButton.length; i++) {
     var button=colorChoiceButton[i];
@@ -144,7 +147,7 @@ function addItemToCart(title,price,imageSrc) {
 
 
 
-//shopping cart functions for the qty increase and decrease buttons. Currently unable to access the input values of the qty buttons, so put onclick directly into the HTML. Failed code is below the active code.
+//shopping cart functions for the qty increase and decrease buttons. Currently unable to access the input values of the qty buttons, so put onclick directly into the HTML. Failed code is below active code.
 function increaseValue1() {
   var value = parseInt(document.getElementById('number-1').value, 10);
   value = isNaN(value) ? 0 : value;
