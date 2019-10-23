@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Fluff Stuff: Shopping Cart
+    </title>
+    <link href='style1.css' type='text/css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/1961ff9c55.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<!-- start of navigation bar-->
+    <div class='topnav'>
+        <span>
+            <a id="home" href='landing.html'> FLUFF STUFF </a>
+        </span>
+        <span>
+            <a class='menu-item' href='browse.html'>Shop</a>
+            <a class='menu-item' href=''>MyPlace</a>
+            <a class='menu-item' href=''>About</a>
+        </span>
+        <span >
+            <a class='side-top' href=''><i class="fas fa-search"></i></a>
+            <a class='side-top' href=''><i class="fas fa-user"></i></a>
+            <a class='side-top' href='shopping_cart_1.html'><i class="fas fa-shopping-cart" id='cart-icon'></i><span id='lblCartCount'>3</span></a>
+        </span>
+    </div>
+
+    <div>
+        <p class='perfectfit'>Run PerfectFit</p>
+    </div>
+
+
+<!-- start of main body code -->
+    <div class="cont-shopping">
+        <a href='browse.html' class='continue-shopping'>
+            <span><i class="fas fa-arrow-circle-left"></i></span>
+        Continue Shopping</a>
+    </div>
+    <div class='shopping-cart'>
+        <div class='shopping-cart-title'>
+            My Cart
+        </div>
+
+        <div class='item'>
+            <div class='image'>
+                <img src='pillow1.png' alt=''/>
+            </div>
+            <div class='item-desc'>
+                <span>Couch Pillow</span>
+                <span>Duck Down</span>
+                <span>Rainy Day</span>
+            </div>
+
+            <div class='qty'>
+                <button class='less' type='button' name='button' onclick='decreaseValue1()'>
+                    <i class="fas fa-minus"></i>
+                </button>
+                <input type='text' name='hi' value='1' id='number-1' class='cart-qty cart-qty-1'>
+                <button class='more' type='button' name='button' onclick='increaseValue1()'>
+                    <i class="fas fa-plus"></i>
+                </button>
+                <div class='remove'>
+                    <button class='rmv-button' type='button'>Remove</button>
+                </div>
+            </div>
+            <div class='total-price'>$19.99</div>
+        </div>
+
+        <div class='item'>
+            <div class='image'>
+                <img src='pillow1.png' alt=''/>
+            </div>
+            <div class='item-desc'>
+                <span>Couch Pillow</span>
+                <span>Memory Foam</span>
+                <span>Morning Haze</span>
+            </div>
+            <div class='qty qty-2'>
+                <button class='less' type='button' name='button' onclick='decreaseValue2()'>
+                    <i class="fas fa-minus"></i>
+                </button>
+                <input type='text' name='name' value='1' id='number-2' class='cart-qty cart-qty-2'>
+                <button class='more more-2' type='button' name='button' onclick='increaseValue2()'>
+                    <i class="fas fa-plus"></i>
+                </button>
+                <div class='remove'>
+                    <button class='rmv-button' type='button'>Remove</button>
+                </div>
+            </div>
+            <div class='total-price'>$19.99</div>
+        </div>
+
+        <div class='item'>
+            <div class='image'>
+                <img src='pillow2.png' alt=''/>
+            </div>
+            <div class='item-desc'>
+                <span>Bed Pillow</span>
+                <span>Duck Down</span>
+                <span>Morning Haze</span>
+            </div>
+            <div class='qty'>
+                <button class='less' type='button' name='button' onclick='decreaseValue3()'>
+                    <i class="fas fa-minus"></i>
+                </button>
+                <input type='text' name='name' id='number-3' value='1' class='cart-qty'>
+                <button class='more' type='button' name='button' onclick='increaseValue3()'>
+                    <i class="fas fa-plus"></i>
+                </button>
+                <div class='remove'>
+                    <button class='rmv-button' type='button' >Remove</button>
+                </div>
+            </div>
+            <div class='total-price'>$29.99</div>
+        </div>
+    </div>
+
+        <div class='subtotal cf'>
+        <ul>
+            <li class='total-row'>
+                <span class='label'>Subtotal</span>
+                <span class='value' id='subtotal'>$69.97</span>
+            <!--</li>
+            <li class='total-row'>
+                <span class='label'>Tax</span>
+                <span class='value' id='tax-cost'>$3.00</span>
+            </li>
+             <li class='total-row'>
+                <span class='label'>Shipping</span>
+                <span class='value' id='shipping-cost'>$10.00</span>
+            </li>
+             <li class='total-row final'>
+                <span class='label'>Total</span>
+                <span class='value' id='total-final'>$82.97</span>
+            </li>-->
+        </ul>
+        <div id='final'>
+            <a href='#' class='checkout'>Checkout <span> <i class="fas fa-arrow-circle-right"></i></span>
+            </a>
+        </div>
+    </div>
+
+    <script src='app.js' defer type='text/javascript'></script>
+
+</body>
+</html>
+
+
+
+
