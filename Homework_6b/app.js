@@ -127,6 +127,8 @@ for (var i=0; i <colorChoiceButton.length; i++) {
 
 
 //code that may be used for assignment 6B (adding items to cart). Currently not working. Cannot access the src element for images.
+
+
 `theButton.addEventListener('click', function(event) {
     var button = event.target
     var shopItem = button.parentElement.parentElement.parentElement
@@ -213,3 +215,24 @@ for (var i=0; i < increaseQty.length; i++) {
 
     updateTotalCart()
 }`
+
+document.getElementbyId('cart-button').addEventListener('click', function(){
+
+})
+
+
+//retreiving the stored JSON strings
+function onLoad(){
+  var newItemAdded = JSON.parse(localStorage.getItem('addMeToCart'))
+
+}
+
+let itemsArray = []
+
+localStorage.setItem('items', JSON.stringify(itemsArray))
+const data = JSON.parse(localStorage.getItem('items'))
+
+
+
+
+
