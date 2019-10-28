@@ -118,22 +118,22 @@
                 <div class='product-color'>
                     <span>Color</span>
                     <div class='color-choice'>
-                        <button class='color-choice-btn' id='blue-denim'>Blue Denim</button>
-                        <button class='color-choice-btn' id='purple'>After School Special</button>
-                        <button class='color-choice-btn' id='teal'>Rainy Day</button>
-                        <button class='color-choice-btn' id='yellow'>Morning Haze</button>
+                        <button class='color-choice-btn' id='blue-denim' onclick="selectColor()">Blue Denim</button>
+                        <button class='color-choice-btn' id='purple'onclick="selectColor()">After School Special</button>
+                        <button class='color-choice-btn' id='teal'onclick="selectColor()">Rainy Day</button>
+                        <button class='color-choice-btn' id='yellow'onclick="selectColor()">Morning Haze</button>
                     </div>
                 </div>
                 <div class='filling-head'>
                     <span>Filling Choice</span>
                     <div class='filling-config'>
-                        <button class='filling-option'>Duck Down</button>
-                        <button class='filling-option'>Memory Foam</button>
-                        <button class='filling-option'>Holy Poly</button>
+                        <button class='filling-option' onclick="selectFilling()">Duck Down</button>
+                        <button class='filling-option' onclick="selectFilling()">Memory Foam</button>
+                        <button class='filling-option' onclick="selectFilling()">Holy Poly</button>
                     </div>
                 </div>
                 <div class='checkout-buttons'>
-                    <button class='cart-button' id='cart-button'>Add to cart</button>
+                    <button class='cart-button' id='cart-button' onclick='sendProductToServer0()'>Add to cart</button>
                     <button class='myplace-button'>Add to MyPlace</button>
                 </div>
             </div>
