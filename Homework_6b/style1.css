@@ -340,7 +340,6 @@ color: white;
 .shopping-cart {
     padding-top: 80px;
     width: 900px;
-    height: 800px;
     margin: 60px auto 0px auto;
     display: flex;
     flex-direction: column;
