@@ -1,66 +1,53 @@
 
-//discover color of selected Product
-/*
-var colorArr = document.getElementsByClassName('color-choice-btn')
-var color
-for (vari=0; i <colorArr.length; i++) {
-    var button=colorArr[i]
-    button.addEventListener('click', function (event) {
-        color = button.innerText
-        console.log(color)
-  })
-}
-console.log(colorArr)
-*/
 
 
-//creating and sending to session storage
-var productArr=[]
+//creating and sending array to session storage
+var productArr=[];
 var cartGuy = sessionStorage.getItem('cart');
 var cart = JSON.parse(cartGuy);
 if (cart!=null){
-  productArr=cart
-  console.log(productArr)
-  console.log(cart)
+  productArr=cart;
+  console.log(productArr);
+  console.log(cart);
 }
 
 //Send Couch Pillow in Product Page to Server
 function sendProductToServer0(){
   var productObject = {};
-  productObject.title='Couch Pillow'
+  productObject.title='Couch Pillow';
   productObject.color=colorSelection;
   productObject.filling=fillingSelection;
   productObject.image='pillow1.png';
   productObject.price = "$19.99";
   productArr.push(productObject);
-  sessionStorage.setItem("cart",JSON.stringify(productArr))
-  console.log(productArr)
+  sessionStorage.setItem("cart",JSON.stringify(productArr));
+  console.log(productArr);
 }
 
 //Send Couch Pillow in Browse Page to Server
 function sendProductToServer1(){
   var productObject1 = {};
-  productObject1.title='Couch Pillow'
+  productObject1.title='Couch Pillow';
   productObject1.color='Rainy Day';
   productObject1.filling='Memory Foam';
   productObject1.price = "$19.99";
   productObject1.image='pillow1.png';
   productArr.push(productObject1);
-  sessionStorage.setItem("cart",JSON.stringify(productArr))
-  console.log(productArr)
+  sessionStorage.setItem("cart",JSON.stringify(productArr));
+  console.log(productArr);
 }
 
 //Send Bed pillow in Browse Page to server
 function sendProductToServer2(){
   var productObject2 = {};
-  productObject2.title='Bed Pillow'
+  productObject2.title='Bed Pillow';
   productObject2.color='Rainy Day';
   productObject2.filling='Memory Foam';
   productObject2.price = "29.99";
   productObject2.image='pillow2.png';
   productArr.push(productObject2);
-  sessionStorage.setItem("cart",JSON.stringify(productArr))
-  console.log(productArr)
+  sessionStorage.setItem("cart",JSON.stringify(productArr));
+  console.log(productArr);
 }
 
 
@@ -68,88 +55,91 @@ function sendProductToServer2(){
 //Send Round Pillow in Browse Page to server
 function sendProductToServer3(){
   var productObject3 = {};
-  productObject3.title='Round Pillow'
+  productObject3.title='Round Pillow';
   productObject3.color='Rainy Day';
   productObject3.filling='Memory Foam';
   productObject3.price = "$39.99";
   productObject3.image='pillow3.png';
   productArr.push(productObject3);
-  sessionStorage.setItem("cart",JSON.stringify(productArr))
-  console.log(productArr)
+  sessionStorage.setItem("cart",JSON.stringify(productArr));
+  console.log(productArr);
 }
 
 //function to run at page load
 function productLoad1(){
+//run function to update cart icon
       function setCartTotal(){
       let numberOfItems= productArr.length + 3
       document.getElementById('lblCartCount').innerText = numberOfItems;}
-  setCartTotal()
-  // how to get this to run on page load? updateTotalCart()
+      setCartTotal()
+
+//for loop to create HTML elements from the Session Storage array
   for (var i=0; i < productArr.length; i++){
-    var cartRow = document.createElement('div')
-    cartRow.classList.add('item')
-    cartRow.setAttribute('id',i)
-    var entireShoppingCart=document.getElementById('shopping-cart-id')
-    var newImage = document.createElement('div')
-    newImage.classList.add('image')
-    cartRow.append(newImage)
-    var actualImage = document.createElement('img')
-    actualImage.src = productArr[i].image
-    newImage.append(actualImage)
-    var itemDesc = document.createElement('div')
-    itemDesc.classList.add('item-desc')
-    cartRow.append(itemDesc)
-    var newTitle=document.createElement('span')
-    newTitle.innerHTML = productArr[i].title
-    itemDesc.append(newTitle)
-    entireShoppingCart.append(cartRow)
-    var newFilling = document.createElement('span')
-    newFilling.innerHTML=productArr[i].filling
-    itemDesc.append(newFilling)
-    var newColor = document.createElement('span')
-    newColor.innerHTML=productArr[i].color
-    itemDesc.append(newColor)
-    var quant = document.createElement('div')
-    quant.classList.add('qty')
-    cartRow.append(quant)
-    var minusBtn = document.createElement('button')
-    minusBtn.classList.add('less')
-    quant.append(minusBtn)
-    var minusIcon = document.createElement('i')
-    minusIcon.classList.add('fas')
-    minusIcon.classList.add('fa-minus')
-    minusBtn.append(minusIcon)
-    var inputSpace = document.createElement('input')
-    inputSpace.classList.add('cart-qty')
-    inputSpace.classList.add('cart-qty-1')
-    inputSpace.value = 1
-    quant.append(inputSpace)
-    var plusBtn = document.createElement('button')
-    plusBtn.classList.add('more')
-    quant.append(plusBtn)
-    var plusIcon = document.createElement('i')
-    plusIcon.classList.add('fas')
-    plusIcon.classList.add('fa-plus')
-    plusBtn.append(plusIcon)
-    var remvElement= document.createElement('div')
-    remvElement.classList.add('remove')
-    quant.append(remvElement)
-    var remvBtn = document.createElement('button')
-    remvBtn.classList.add('rmv-button')
-    remvBtn.innerHTML='Remove'
-    remvBtn.type = 'button'
-    remvElement.append(remvBtn)
-    var newPrice = document.createElement('div')
-    newPrice.classList.add('total-price')
-    newPrice.innerHTML=productArr[i].price
-    cartRow.append(newPrice)
-    updateTotalCart()
+    var cartRow = document.createElement('div');
+    cartRow.classList.add('item');
+    cartRow.setAttribute('id',i);
+    var entireShoppingCart=document.getElementById('shopping-cart-id');
+    var newImage = document.createElement('div');
+    newImage.classList.add('image');
+    cartRow.append(newImage);
+    var actualImage = document.createElement('img');
+    actualImage.src = productArr[i].image;
+    newImage.append(actualImage);
+    var itemDesc = document.createElement('div');
+    itemDesc.classList.add('item-desc');
+    cartRow.append(itemDesc);
+    var newTitle=document.createElement('span');
+    newTitle.innerHTML = productArr[i].title;
+    itemDesc.append(newTitle);
+    entireShoppingCart.append(cartRow);
+    var newFilling = document.createElement('span');
+    newFilling.innerHTML=productArr[i].filling;
+    itemDesc.append(newFilling);
+    var newColor = document.createElement('span');
+    newColor.innerHTML=productArr[i].color;
+    itemDesc.append(newColor);
+    var quant = document.createElement('div');
+    quant.classList.add('qty');
+    cartRow.append(quant);
+    var minusBtn = document.createElement('button');
+    minusBtn.classList.add('less');
+    quant.append(minusBtn);
+    var minusIcon = document.createElement('i');
+    minusIcon.classList.add('fas');
+    minusIcon.classList.add('fa-minus');
+    minusBtn.append(minusIcon);
+    var inputSpace = document.createElement('input');
+    inputSpace.classList.add('cart-qty');
+    inputSpace.classList.add('cart-qty-1');
+    inputSpace.value = 1;
+    quant.append(inputSpace);
+    var plusBtn = document.createElement('button');
+    plusBtn.classList.add('more');
+    quant.append(plusBtn);
+    var plusIcon = document.createElement('i');
+    plusIcon.classList.add('fas');
+    plusIcon.classList.add('fa-plus');
+    plusBtn.append(plusIcon);
+    var remvElement= document.createElement('div');
+    remvElement.classList.add('remove');
+    quant.append(remvElement);
+    var remvBtn = document.createElement('button');
+    remvBtn.classList.add('rmv-button');
+    remvBtn.innerHTML='Remove';
+    remvBtn.type = 'button';
+    remvElement.append(remvBtn);
+    var newPrice = document.createElement('div');
+    newPrice.classList.add('total-price');
+    newPrice.innerHTML=productArr[i].price;
+    cartRow.append(newPrice);
+    updateTotalCart();
     remvBtn.onclick = function removeStorage(){
       productArr.splice(i,1)
       sessionStorage.setItem("cart",JSON.stringify(productArr))}
 //}
 }
 
+//function to remove an element from the shopping cart page
 var rmvCartItemsButton = document.getElementsByClassName('rmv-button')
 for (var j=0; j < rmvCartItemsButton.length; j++) {
     var button=rmvCartItemsButton[j]
@@ -171,7 +161,6 @@ document.getElementById('lblCartCount').innerText = total
     var button=rmvCartItemsButton[i]
     button.addEventListener('click', function() {
         decreaseCartIcon()
-        //updateTotalCart()
     })
 }
 }
@@ -251,7 +240,6 @@ for (var i=0; i < qtyInputs.length; i++) {
 
 
 //Select product filling
-//has global variable
 let fillingChoiceButton = document.getElementsByClassName('filling-option')
 console.log(fillingChoiceButton)
 for (var i=0; i <fillingChoiceButton.length; i++) {
@@ -271,8 +259,6 @@ for (var i=0; i <fillingChoiceButton.length; i++) {
 }
 
 //Select product color
-//has global variable
-
 let colorChoiceButton = document.getElementsByClassName('color-choice-btn')
 for (var i=0; i <colorChoiceButton.length; i++) {
     var button=colorChoiceButton[i];
