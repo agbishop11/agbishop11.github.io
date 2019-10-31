@@ -14,28 +14,17 @@ console.log(colorArr)
 */
 
 
-//Capture and set selected color
-var colorSelection
-function selectColor(){
-  colorSelection = event.target.innerText
-  console.log(colorSelection)
-}
-//Capture and set selected filling
-var fillingSelection
-function selectFilling(){
-  fillingSelection = event.target.innerText
-  console.log(fillingSelection)
-}
-
-
+//creating and sending to session storage
 var productArr=[]
 var cartGuy = sessionStorage.getItem('cart');
 var cart = JSON.parse(cartGuy);
 if (cart!=null){
   productArr=cart
+  console.log(productArr)
+  console.log(cart)
 }
 
-//Couch Pillow
+//Send Couch Pillow in Product Page to Server
 function sendProductToServer0(){
   var productObject = {};
   productObject.title='Couch Pillow'
@@ -48,7 +37,7 @@ function sendProductToServer0(){
   console.log(productArr)
 }
 
-//Couch Pillow
+//Send Couch Pillow in Browse Page to Server
 function sendProductToServer1(){
   var productObject1 = {};
   productObject1.title='Couch Pillow'
@@ -61,7 +50,7 @@ function sendProductToServer1(){
   console.log(productArr)
 }
 
-//Bed pillow
+//Send Bed pillow in Browse Page to server
 function sendProductToServer2(){
   var productObject2 = {};
   productObject2.title='Bed Pillow'
@@ -76,7 +65,7 @@ function sendProductToServer2(){
 
 
 
-//Round Pillow
+//Send Round Pillow in Browse Page to server
 function sendProductToServer3(){
   var productObject3 = {};
   productObject3.title='Round Pillow'
@@ -89,11 +78,17 @@ function sendProductToServer3(){
   console.log(productArr)
 }
 
-
+//function to run at page load
 function productLoad1(){
+      function setCartTotal(){
+      let numberOfItems= productArr.length + 3
+      document.getElementById('lblCartCount').innerText = numberOfItems;}
+  setCartTotal()
+  // how to get this to run on page load? updateTotalCart()
   for (var i=0; i < productArr.length; i++){
     var cartRow = document.createElement('div')
     cartRow.classList.add('item')
+    cartRow.setAttribute('id',i)
     var entireShoppingCart=document.getElementById('shopping-cart-id')
     var newImage = document.createElement('div')
     newImage.classList.add('image')
@@ -142,52 +137,52 @@ function productLoad1(){
     var remvBtn = document.createElement('button')
     remvBtn.classList.add('rmv-button')
     remvBtn.innerHTML='Remove'
+    remvBtn.type = 'button'
     remvElement.append(remvBtn)
     var newPrice = document.createElement('div')
     newPrice.classList.add('total-price')
     newPrice.innerHTML=productArr[i].price
     cartRow.append(newPrice)
-    function increaseValue4() {
-    plusBtn.onclick = function(){
-    parseInt(inputSpace.value) = parseInt(inputSpace.value)+ 1
     updateTotalCart()
+    //remvBtn.onclick = function removeStorage(){
+      //productArr.splice(i,1)
+      //sessionStorage.setItem("cart",JSON.stringify(productArr))
+//}
 }
 
-  }}}
-
-
-//Bed Pillow
-function sendProductToServer2(){
-  var productObject1 = {};
-  productObject1.title='Bed Pillow'
-  productObject1.color='Rainy Day';
-  productObject1.filling='Memory Foam';
-  productObject1.price = "$29.99";
-  productArr.push(productObject1);
-  sessionStorage.setItem("cart",JSON.stringify(productArr))
-  console.log(productArr)
-}
-
-
-
-
-
-let numberOfItems=document.getElementsByClassName('item')
-console.log(numberOfItems)
-console.log(numberOfItems.length)
-
-
-//Remove item from cart
 var rmvCartItemsButton = document.getElementsByClassName('rmv-button')
-for (var i=0; i < rmvCartItemsButton.length; i++) {
-    var button=rmvCartItemsButton[i]
+for (var j=0; j < rmvCartItemsButton.length; j++) {
+    var button=rmvCartItemsButton[j]
     button.addEventListener('click', function (event) {
         var buttonClicked = event.target
         buttonClicked.parentElement.parentElement.parentElement.remove()
         updateTotalCart()
     })
 }
-console.log(rmvCartItemsButton)
+
+//Decrease the cart icon when items are removed from shopping cart
+function decreaseCartIcon(){
+  let cartIcon = parseInt(document.getElementById('lblCartCount').innerText);
+total = cartIcon
+total = total -1
+document.getElementById('lblCartCount').innerText = total
+}
+  for (var i=0; i < rmvCartItemsButton.length; i++) {
+    var button=rmvCartItemsButton[i]
+    button.addEventListener('click', function() {
+        decreaseCartIcon()
+        //updateTotalCart()
+    })
+}
+}
+
+
+//set the number of items in the cart icon
+function setCartTotal(){
+let numberOfItems= productArr.length + 3
+document.getElementById('lblCartCount').innerText = numberOfItems;}
+
+
 
 //Update shopping cart subtotal
 function updateTotalCart() {
@@ -204,17 +199,26 @@ function updateTotalCart() {
     }
     let newTotal=total.toFixed(2)
     document.getElementById('subtotal').innerText='$'+newTotal
-    var totalFinal= parseFloat(document.getElementById('total-final').innerText.replace('$',''));
-    var taxCost= parseFloat(document.getElementById('tax-cost').innerText.replace('$',''));
-    var shippingCost= parseFloat(document.getElementById('shipping-cost').innerText.replace('$',''));
 }
 
 
-
-
+//Capture and set selected color in Product Page
+var colorSelection
+function selectColor(){
+  colorSelection = event.target.innerText
+  console.log(colorSelection)
+}
+//Capture and set selected filling in Product Page
+var fillingSelection
+function selectFilling(){
+  fillingSelection = event.target.innerText
+  console.log(fillingSelection)
+}
 
 //Update the cart icon with number of items currently in cart
 //Increasing cart icon when items are added to cart
+
+console.log('hi from here')
 
 function updateCartIcon() {
 let cartIcon = parseInt(document.getElementById('lblCartCount').innerText);
@@ -245,25 +249,9 @@ for (var i=0; i < qtyInputs.length; i++) {
     })
 }
 
-//Decrease the cart icon when items are removed from shopping cart
-function decreaseCartIcon(){
-  let cartIcon = parseInt(document.getElementById('lblCartCount').innerText);
-total = cartIcon
-total = total -1
-document.getElementById('lblCartCount').innerText = total
-}
-  for (var i=0; i < rmvCartItemsButton.length; i++) {
-    var button=rmvCartItemsButton[i]
-    button.addEventListener('click', function() {
-        decreaseCartIcon()
-    })
-}
-
-
-
-
 
 //Select product filling
+//has global variable
 let fillingChoiceButton = document.getElementsByClassName('filling-option')
 console.log(fillingChoiceButton)
 for (var i=0; i <fillingChoiceButton.length; i++) {
@@ -282,10 +270,9 @@ for (var i=0; i <fillingChoiceButton.length; i++) {
     })
 }
 
-
-
-
 //Select product color
+//has global variable
+
 let colorChoiceButton = document.getElementsByClassName('color-choice-btn')
 for (var i=0; i <colorChoiceButton.length; i++) {
     var button=colorChoiceButton[i];
@@ -301,29 +288,6 @@ for (var i=0; i <colorChoiceButton.length; i++) {
         buttonClicked.style.color = 'white';
     })
 }
-
-
-
-//code that may be used for assignment 6B (adding items to cart). Currently not working. Cannot access the src element for images.
-
-
-`theButton.addEventListener('click', function(event) {
-    var button = event.target
-    var shopItem = button.parentElement.parentElement.parentElement
-    var title = shopItem.getElementsByClassName("prod-title")[0].innerText;
-    var price = shopItem.getElementsByClassName("product-price")[0].innerText;
-    var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src;
-    console.log(title, price, imageSrc);
-    addItemToCart(title,price,imageSrc);
-})
-
-function addItemToCart(title,price,imageSrc) {
-    var shoppingCartRow = document.createElement('div');
-    shoppingCartRow.innerText = title;
-    var cartItems = document.getElementsByClassName('item')[0];
-    console.log(cartItems)
-    cartItems.append(shoppingCartRow);
-}`
 
 
 
@@ -378,22 +342,3 @@ function decreaseValue3() {
   document.getElementById('number-3').value = value;
   updateTotalCart()
 }
-
-
-
-//retreiving the stored JSON strings
-
-/*function onLoad(){
-  var newItemAdded = JSON.parse(localStorage.getItem('addMeToCart'))
-
-}
-
-let itemsArray = []
-
-localStorage.setItem('items', JSON.stringify(itemsArray))
-const data = JSON.parse(localStorage.getItem('items'))
-
-
-*/
-
-
