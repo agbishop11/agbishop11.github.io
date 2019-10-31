@@ -207,8 +207,6 @@ function selectFilling(){
 //Update the cart icon with number of items currently in cart
 //Increasing cart icon when items are added to cart
 
-console.log('hi from here')
-
 function updateCartIcon() {
 let cartIcon = parseInt(document.getElementById('lblCartCount').innerText);
 total = cartIcon
