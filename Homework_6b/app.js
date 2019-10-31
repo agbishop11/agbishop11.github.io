@@ -144,9 +144,9 @@ function productLoad1(){
     newPrice.innerHTML=productArr[i].price
     cartRow.append(newPrice)
     updateTotalCart()
-    //remvBtn.onclick = function removeStorage(){
-      //productArr.splice(i,1)
-      //sessionStorage.setItem("cart",JSON.stringify(productArr))
+    remvBtn.onclick = function removeStorage(){
+      productArr.splice(i,1)
+      sessionStorage.setItem("cart",JSON.stringify(productArr))}
 //}
 }
 
