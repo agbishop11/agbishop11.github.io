@@ -39,7 +39,6 @@ $(function () {
 
 /*Work Section*/
 
-
 $(window).on("load", function () {
 
     $("#animation-container").isotope({
@@ -64,6 +63,7 @@ $(window).on("load", function () {
     });
 
 });
+
 
 $(function () {
 
