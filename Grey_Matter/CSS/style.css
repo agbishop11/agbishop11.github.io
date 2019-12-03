@@ -270,6 +270,7 @@ btn-landing:focus {
 .origin-item {
     background: white;
     padding: 50px;
+    margin-bottom:20px;
 }
 
 .origin-item i {
@@ -527,10 +528,6 @@ btn-green:focus {
     left: 0;
     background: rgba(15, 9, 16, 0.8);
     opacity: 0;
-}
-
-.work-item img {
-    overflow: hidden;
 }
 
 .work-item-deets {
