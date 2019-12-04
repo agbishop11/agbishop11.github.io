@@ -238,7 +238,8 @@ btn-landing:focus {
     display: inline-block;
     position: relative;
     left: -70px;
-    top: 60px
+    top: 60px;
+    margin-bottom:30px;
 }
 
 .vert-head h2 {
@@ -252,6 +253,10 @@ btn-landing:focus {
 
 #origins-right p:first-child {
     margin-bottom: 34px;
+}
+
+#origin-right p {
+    padding-right: 40px
 }
 
 #origins-lower img {
@@ -337,25 +342,30 @@ btn-landing:focus {
 
 /* Services */
 .hor-heading {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .hor-heading h2 {
     font-weight: 200;
     font-size: 40px;
-    margin-top: 80px;
+    margin-top: 60px;
 }
 
-#services-part-one img {
-    margin-top: 55px;
-    margin-bottom: 55px;
+#services_1 img {
+    margin-top: 0px;
+    margin-bottom: 0px;
     margin-left: 0;
     margin-right: 0;
+    size: 60%;
 }
 
-.service-one {
-    margin-top: 32px;
-    margin-bottom: 32px;
+.service-cont:first-of-type{
+    padding-top:50px;
+}
+
+.service-cont {
+    margin-top: 20px;
+    margin-bottom: 0px;
     margin-right: 0px;
     margin-left: 0px;
 }
@@ -382,8 +392,10 @@ btn-landing:focus {
     margin-bottom: 15px;
 }
 
+
+
 #content-bx-large {
-    margin-bottom: 200px;
+    margin-bottom: 80px;
     margin-top: 100px;
 }
 
