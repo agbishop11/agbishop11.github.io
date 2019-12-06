@@ -1,0 +1,10 @@
+/* Bootstrap Media Large Devices */
+
+@media(min-width: 1200px) {
+    #landing-header h2 {
+        color: blue
+    }
+}
+
+
+
