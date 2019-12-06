@@ -15,12 +15,12 @@ $(function () {
             
             $("nav").addClass("nav-background");
             
-            $(".navbar-brand img").attr("src", "IMG/grey-matter-images/Lotus_1.png")
+            $(".navbar-brand img").attr("src", "Assets/IMG/grey-matter-images/Lotus_1.png")
         } else {
             
             $("nav").removeClass("nav-background");
             
-            $(".navbar-brand img").attr("src", "IMG/grey-matter-images/Lotus_light.png")
+            $(".navbar-brand img").attr("src", "Assets/IMG/grey-matter-images/Lotus_light.png")
         }
         
     })
@@ -42,7 +42,7 @@ $(function () {
 $(window).on("load", function () {
 
     $("#animation-container").isotope({
-
+        
     });
 
     $(".iso-fil").on("click", "button", function () {
