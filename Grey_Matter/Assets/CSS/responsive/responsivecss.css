@@ -9,14 +9,6 @@
 }
 
 
-
-/* Medium Devices */
-@media(min-width: 992px) and (max-width: 1199px) {
-    
-
-    
-}
-
 /* Small Devices */
 @media(min-width: 768px) and (max-width: 991px) {
     
@@ -43,6 +35,18 @@
 /* Phones */
 @media(max-width: 767px) {
     
-
+    .vert-head {
+        text-align: center;
+    }
     
+    .vert-head h2{
+        line-height: 35px;
+        line-height: normal
+    }
+    
+    .vert-head h4 {
+        margin-bottom: 10px;
+        transform: rotate(0deg);
+        position: static;
+    }
 }
