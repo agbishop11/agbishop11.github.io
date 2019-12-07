@@ -41,7 +41,9 @@
     
     .vert-head h2{
         line-height: 35px;
-        line-height: normal
+        line-height: normal;
+        margin:0;
+        margin-bottom:10px
     }
     
     .vert-head h4 {
