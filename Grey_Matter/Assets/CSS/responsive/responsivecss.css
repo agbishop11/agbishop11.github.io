@@ -3,9 +3,7 @@
 @media(min-width: 1200px) {
 
     .service-book .book-big {
-        
         min-height: 482px;
-        
     }
 
 }
@@ -22,8 +20,24 @@
 /* Small Devices */
 @media(min-width: 768px) and (max-width: 991px) {
     
-
-    
+    .r-tabs-accordion-title {
+        text-align:center;
+        margin-bottom: 10px;
+        
+    }
+    .r-tabs-accordion-title a {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #000000;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    .r-tabs-state-active a {
+    color: darkblue;
+    font-weight: 800;
+    transition: border-color 300ms linear;
+    }
 }
 
 /* Phones */
