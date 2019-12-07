@@ -1,11 +1,3 @@
-/*Colors for Grey Matter
-Black: #000000
-Grey: #5d737e
-Yellow: #fff07c
-Off-white: #f0f7ee
-Green: #87bba2
-*/
-
 /* Body */
 
 body,
@@ -51,7 +43,7 @@ p {
 .website-navbar-wrap {
     padding-left: 70px;
     padding-right: 85px;
-    padding-top:0;
+    padding-top: 0;
 }
 
 .navbar-brand {
@@ -64,7 +56,7 @@ ul.navbar-nav li a {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 14px;
     text-transform: uppercase;
-    padding-top:20px
+    padding-top: 20px
 }
 
 
@@ -76,7 +68,7 @@ ul.navbar-nav li a:focus {
 
 .nav-background {
     background: white;
-    padding-top:10px;
+    padding-top: 10px;
     box-shadow: 0 5px 6px -8px #999;
 }
 
@@ -124,7 +116,7 @@ ul.navbar-nav li a:focus {
 #landing-ovr {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.68);
-    top:0;
+    top: 0;
     width: 100%;
     height: 100%;
     z-index: -2;
@@ -239,7 +231,7 @@ btn-landing:focus {
     position: relative;
     left: -70px;
     top: 60px;
-    margin-bottom:30px;
+    margin-bottom: 30px;
 }
 
 .vert-head h2 {
@@ -275,7 +267,7 @@ btn-landing:focus {
 .origin-item {
     background: white;
     padding: 50px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
 .origin-item i {
@@ -320,7 +312,7 @@ btn-landing:focus {
 }
 
 
-/* Company Quote */
+/* Quote */
 #company-quote {
     background: url("../IMG/grey-matter-images/quote.jpg");
     background-repeat: no-repeat;
@@ -357,7 +349,7 @@ btn-landing:focus {
     margin-left: 0;
     margin-right: 0;
     height: 100%;
-    width:100%;
+    width: 100%;
 }
 
 
@@ -398,12 +390,12 @@ btn-landing:focus {
 }
 
 
-/* Services Part 2 */
+/* Capabilities */
 
 #services-part-two {
     background: #f0f7ee;
     margin-bottom: 100px;
-    padding-bottom:100px;
+    padding-bottom: 100px;
 
 }
 
@@ -491,7 +483,7 @@ btn-green:focus {
 }
 
 
-/* Work */
+/* Hueristics section */
 
 #work .vert-head {
     margin-bottom: 80px;
@@ -529,8 +521,8 @@ btn-green:focus {
 }
 
 .work-item img {
-    height:100%;
-    width:100%;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
 }
 
